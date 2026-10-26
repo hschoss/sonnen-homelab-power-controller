@@ -1,0 +1,7 @@
+services:
+  decision-engine:
+    build: .
+    env_file: .env
+    command: ["python", "scripts/run_decision_engine.py"]
+    restart: unless-stopped
+    network_mode: host
